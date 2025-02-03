@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import '../../../../core/error/failures.dart';
-import '../../domain/entities/repository.dart';
+import '../entities/repository.dart';
 
 
 abstract class GithubRepository {
