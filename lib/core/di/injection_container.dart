@@ -1,6 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import '../../features/github_repos/data/datasources/github_local_datasource.dart';
 import '../../features/github_repos/data/datasources/github_remote_datasource.dart';
 import '../../features/github_repos/data/repositories/github_repository_impl.dart';
 import '../../features/github_repos/domain/repositories/github_repository.dart';
@@ -19,6 +20,7 @@ Future<void> init() async {
   sl.registerLazySingleton<GithubRepository>(
     () => GithubRepositoryImpl(
       remoteDataSource: sl(),
+      localDataSource: sl(),
       networkInfo: sl(),
     ),
   );
@@ -26,6 +28,9 @@ Future<void> init() async {
   // Data sources
   sl.registerLazySingleton<GithubRemoteDataSource>(
     () => GithubRemoteDataSourceImpl(client: sl()),
+  );
+  sl.registerLazySingleton<GithubLocalDataSource>(
+    () => GithubLocalDataSourceImpl(),
   );
 
   // Core
