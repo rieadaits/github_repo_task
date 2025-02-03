@@ -1,4 +1,4 @@
-# ERA Infotech Ltd. Github Reps Task
+# ERA Infotech Ltd. Github Repos Task
 
 # About
 
