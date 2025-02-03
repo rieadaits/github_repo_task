@@ -2,7 +2,7 @@
 
 # About
 
-A simple Flutter app that displays List of the Github Users, The users repo list and the repo details coming from Github API using Clean Architecture pattern and Bloc State Management.
+A simple Flutter app that displays List of the Github Repos of Android topic and the repo details which are cached in local database and fetched from Github API using Clean Architecture pattern and Bloc State Management.
 
 #### Installation
 
